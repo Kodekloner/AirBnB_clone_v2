@@ -52,7 +52,6 @@ def deploy():
     if archive_path is None:
         print("Deployment failed. No archive created.")
         return False
-    
     if do_deploy(archive_path):
         print("New version deployed!")
         return True
