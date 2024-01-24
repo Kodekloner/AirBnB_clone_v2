@@ -50,5 +50,12 @@ def deploy():
     """creates and distributes an archive to the web servers"""
     archive_path = do_pack()
     if archive_path is None:
+        print("Deployment failed. No archive created.")
         return False
-    return do_deploy(archive_path)
+    
+    if do_deploy(archive_path):
+        print("New version deployed!")
+        return True
+    else:
+        print("Deployment failed. Check the logs for more information.")
+        return False
