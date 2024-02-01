@@ -9,7 +9,7 @@ execute: fab -f 3-deploy_web_static.py deploy -i ~/.ssh/id_rsa -u ubuntu
 from fabric.api import env, local, put, run
 from datetime import datetime
 from os.path import exists, isdir
-env.hosts = ['54.226.9.101', '34.232.53.161']
+env.hosts = ['18.204.14.243', '18.234.169.31']
 env.user = 'ubuntu'
 env.key_filename = '~/.ssh/school'
 
